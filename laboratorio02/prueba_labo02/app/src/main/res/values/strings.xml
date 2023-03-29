@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">prueba_labo02</string>
+    <string name="bmi_title">BMI</string>
+    <string name="card_weight">Weight</string>
+    <string name="card_height">Height</string>
+    <string name="card_kg">kg</string>
+    <string name="card_cm">cm</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="_70">70</string>
+    <string name="_180">180</string>
+    <string name="resultUnderweight">Underweight</string>
+    <string name="resultHealthy">Healthy</string>
+    <string name="resultObese">Obese</string>
+
+
+</resources>
