@@ -17,6 +17,7 @@ import kotlin.math.pow
 
 
 class MainActivity : AppCompatActivity() {
+    //UI Variables declaration
     private lateinit var weightEditTextview: EditText
     private lateinit var heightEditTextview: EditText
     private lateinit var bmiTextview: TextView
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         bind()
 
+        //ClickListener del boton calcular. Valida los campos de los EditText, ejecuta la funcion calcular y esconde el teclado numerico
         btnCalculate.setOnClickListener{
             it.hideKeyboard()
             if (!validar()){
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //Se conectan las variables UI con sus elementos de la interfaz usando sus id
     private fun bind(){
         weightEditTextview = findViewById(R.id.weightEditText)
         heightEditTextview = findViewById(R.id.heightEditText)
@@ -49,7 +52,8 @@ class MainActivity : AppCompatActivity() {
         resultTextView = findViewById(R.id.resultTextview)
         descriptionTextView = findViewById(R.id.descriptionTextview)
     }
-
+    
+    //Calcula el bmi del usuario y se determinan los resultados
     @SuppressLint("SetTextI18n")
     private fun bmiCalcular(){
         val weight = weightEditTextview.text.toString().toFloat()
@@ -84,6 +88,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //validacion de campos vacios
     fun validar(): Boolean{
         var retorno = true
         val weight = weightEditTextview.text.toString()
@@ -101,6 +106,7 @@ class MainActivity : AppCompatActivity() {
         return retorno
     }
 
+    //Funcion para esconder el teclado
     fun View.hideKeyboard(){
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(windowToken, 0)
