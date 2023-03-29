@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Practica_labo03</string>
+    <string name="titulo">Cantidad de dinero</string>
+    <string name="contador">0</string>
+    <string name="five_cents">$0.05</string>
+    <string name="ten_cents">$0.10</string>
+    <string name="quarter">$0.25</string>
+    <string name="onedollar">$1.00</string>
+    <string name="image_description">Image description</string>
+</resources>
